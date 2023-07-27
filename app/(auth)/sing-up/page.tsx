@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 import './sing-up.scss';
 
@@ -20,7 +21,6 @@ export default function SingUp() {
                 <input type='checkbox' className='sign-in__check' checked/>
                 <p className='sign-in__from-check-content'>Bằng việc đăng ký bạn đã đồng ý với điều khoản sử dụng</p>
               </div>
-              {/* <a className='sign-in__link'>Quên mật khẩu?</a> */}
               <button className='sign-in__btn-login'>ĐĂNG NHẬP</button>
             </form>
 
@@ -55,13 +55,6 @@ export default function SingUp() {
           </div>
         </div>
       </div>
-      {/* <div className='contact'>
-        <ul>
-          <li>Quy chế hoạt động sàn</li>
-          <li>Chính sách bảo mật</li>
-          <li>Liên hệ hỗ trợ</li>
-        </ul>
-      </div> */}
     </>
   )
 }

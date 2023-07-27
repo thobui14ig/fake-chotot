@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import './sign-in.scss';
 
 export default function SingIn() {
@@ -48,13 +49,6 @@ export default function SingIn() {
           </div>
         </div>
       </div>
-      {/* <div className='contact'>
-        <ul>
-          <li>Quy chế hoạt động sàn</li>
-          <li>Chính sách bảo mật</li>
-          <li>Liên hệ hỗ trợ</li>
-        </ul>
-      </div> */}
     </>
   )
 }
