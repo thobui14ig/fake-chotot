@@ -1,4 +1,5 @@
 import HeaderLanding from "@/components/landing/navbar"
+import Category from "./category"
 
 const HomeLayout = ({
     children,
@@ -12,6 +13,7 @@ const HomeLayout = ({
                 <HeaderLanding/>
                 <main className="flex items-center justify-center pt-20">
                   <div style={{ width: '960px' }}>
+                    <Category/>
                     {children}
                   </div>
                    
