@@ -1,4 +1,4 @@
-import HeaderLanding from "@/components/landing/header"
+import HeaderLanding from "@/components/landing/navbar"
 
 const HomeLayout = ({
     children,
@@ -10,8 +10,11 @@ const HomeLayout = ({
         <div className="flex">
             <div className="flex flex-col flex-1">
                 <HeaderLanding/>
-                <main className="flex flex-col items-center justify-between px-96 pt-20">
+                <main className="flex items-center justify-center pt-20">
+                  <div style={{ width: '960px' }}>
                     {children}
+                  </div>
+                   
                 </main>
             
           </div>

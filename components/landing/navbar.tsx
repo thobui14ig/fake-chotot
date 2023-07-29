@@ -1,6 +1,6 @@
 'use client'
-import { DownOutlined, UnorderedListOutlined, MessageOutlined,NotificationOutlined } from '@ant-design/icons';
-import { Avatar, Button, Dropdown, MenuProps, Space, message } from 'antd';
+import { DownOutlined, MessageOutlined, NotificationOutlined } from '@ant-design/icons';
+import { Avatar, Button, Dropdown, Input, MenuProps, Space, message } from 'antd';
 
 const onClick: MenuProps['onClick'] = ({ key }) => {
   message.info(`Click on item ${key}`);
@@ -20,18 +20,25 @@ const items: MenuProps['items'] = [
     key: '3',
   },
 ];
+
+const { Search } = Input;
+
 function HeaderLanding() {
   return (
     <header
       className="flex flex-row items-center justify-between h-20 px-10 fixed top-0 left-0 right-0 z-10"
       style={{ background: '#ffba00', fontSize: '0.875rem' }}
     >
-      <div className="font-bold">Hàng giảm giá</div>
+      <div className="font-bold text-lg">Hàng giảm giá</div>
       <div className="flex-grow"></div>
-      <div className='pt-2 '>
+
+       <div style={{ width: '800px' }} className='flex justify-end'>
+        <Search placeholder="Tìm kiếm hàng giá rẻ" size="large" className='w-11/12'/>
+      </div>     
+      <div className='pl-20 pt-2'>
         <NotificationOutlined className='text-2xl cursor-pointer' size={30}/>
       </div>
-      <div className='pl-6 pt-2 '>
+      <div className='pl-6 pt-2'>
           <MessageOutlined className='text-2xl cursor-pointer'/>
       </div>
       <div className='pl-6 flex justify-center items-center cursor-pointer'>
