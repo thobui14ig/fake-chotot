@@ -1,5 +1,4 @@
 import HeaderLanding from "@/components/landing/header"
-import SidebarLangding from "@/components/landing/sidebar"
 
 const HomeLayout = ({
     children,
@@ -7,12 +6,11 @@ const HomeLayout = ({
     children: React.ReactNode
   }) => {
     return(
-        <main>
+      <main>
         <div className="flex">
-            <SidebarLangding/>
             <div className="flex flex-col flex-1">
                 <HeaderLanding/>
-                <main className="md:pl-72 pb-10">
+                <main className="flex flex-col items-center justify-between px-96 pt-20">
                     {children}
                 </main>
             
