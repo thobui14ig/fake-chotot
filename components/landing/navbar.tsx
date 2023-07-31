@@ -9,15 +9,15 @@ const onClick: MenuProps['onClick'] = ({ key }) => {
 
 const items: MenuProps['items'] = [
   {
-    label: '1st menu item',
+    label: 'Đăng nhập / Đăng xuất',
     key: '1',
   },
   {
-    label: '2nd menu item',
+    label: 'Đơn mua',
     key: '2',
   },
   {
-    label: '3rd menu item',
+    label: 'Đơn bán',
     key: '3',
   },
 ];
@@ -26,7 +26,7 @@ const { Search } = Input;
 
 function HeaderLanding() {
   return (
-    <header className="flex justify-between items-center bg-gray-800 p-4" style={{ background: '#ffba00', fontSize: '0.875rem' }}>
+    <header className="flex justify-between items-center bg-gray-800 p-4 fixed top-0 left-0 right-0 z-10" style={{ background: '#ffba00', fontSize: '0.875rem' }}>
       <div className="flex items-center">
         {/* <img src="path_to_logo.png" alt="Logo" className="h-8 w-8"/> */}
         <span className="text-white font-semibold ml-2">Your Logo</span>
@@ -46,7 +46,7 @@ function HeaderLanding() {
           <Dropdown menu={{ items, onClick }}>
             <a onClick={(e) => e.preventDefault()}>
               <Space>
-                thobui
+                Tài khoản
                 <DownOutlined className='text-xs'/>
               </Space>
             </a>
