@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 import { DownOutlined, MessageOutlined, NotificationOutlined } from '@ant-design/icons';
 import { Avatar, Button, Dropdown, Input, MenuProps, Space, message } from 'antd';
@@ -25,43 +26,39 @@ const { Search } = Input;
 
 function HeaderLanding() {
   return (
-    <header
-      className="flex flex-row items-center justify-between h-20 px-10 fixed top-0 left-0 right-0 z-10"
-      style={{ background: '#ffba00', fontSize: '0.875rem' }}
-    >
-      <div className="font-bold text-lg">Hàng giảm giá</div>
-      <div className="flex-grow"></div>
-
-       <div style={{ width: '800px' }} className='flex justify-end'>
-        <Search placeholder="Tìm kiếm hàng giá rẻ" size="large" className='w-11/12'/>
-      </div>     
-      <div className='pl-20 pt-2'>
-        <NotificationOutlined className='text-2xl cursor-pointer' size={30}/>
-      </div>
-      <div className='pl-6 pt-2'>
-          <MessageOutlined className='text-2xl cursor-pointer'/>
-      </div>
-      <div className='pl-6 flex justify-center items-center cursor-pointer'>
-        <span>Quản lý tin</span>
+    <header className="flex justify-between items-center bg-gray-800 p-4" style={{ background: '#ffba00', fontSize: '0.875rem' }}>
+      <div className="flex items-center">
+        {/* <img src="path_to_logo.png" alt="Logo" className="h-8 w-8"/> */}
+        <span className="text-white font-semibold ml-2">Your Logo</span>
       </div>
 
-      <div className='pl-6'>
-        <Avatar
-          style={{ border: '1px solid #e5e7eb', marginRight: 10 }}
-        />
-       <Dropdown menu={{ items, onClick }}>
-        <a onClick={(e) => e.preventDefault()}>
-          <Space>
-            thobui
-            <DownOutlined className='text-xs'/>
-          </Space>
-        </a>
-      </Dropdown>
+      <div className="flex flex-1 justify-end mx-2">
+        <Search type="text" placeholder="Tìm kiếm sản phẩm giá rẻ" className="py-1 px-2 rounded-md text-white lg:w-3/4 "/>
       </div>
-      <div className='pl-6'>
-        <Button type="primary" className='w-44 h-10'>Đăng tin</Button>
+
+      <div>
+          <NotificationOutlined className='cursor-pointer text-xl'/>
+          <MessageOutlined className='cursor-pointer ml-6 text-xl'/>
+          <span className='ml-6'>Quản lý tin</span>
+          <Avatar className='ml-6'
+            style={{ border: '1px solid #e5e7eb', marginRight: 10 }}
+          />
+          <Dropdown menu={{ items, onClick }}>
+            <a onClick={(e) => e.preventDefault()}>
+              <Space>
+                thobui
+                <DownOutlined className='text-xs'/>
+              </Space>
+            </a>
+          </Dropdown>
+          <Button type="primary" className='w-44 h-10 ml-6'>Đăng tin</Button>
+
       </div>
-    </header>
+  </header>
+
+
+
+
   
   )
 }
