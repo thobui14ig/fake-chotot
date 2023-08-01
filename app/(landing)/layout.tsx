@@ -1,5 +1,5 @@
 import HeaderLanding from "@/components/landing/navbar/navbar"
-import Category from "./category"
+import Carousel from "./Home/carousel"
 
 const HomeLayout = ({
     children,
@@ -11,11 +11,11 @@ const HomeLayout = ({
         <div className="flex">
             <div className="flex flex-col flex-1">
                 <HeaderLanding/>
-                <main className="flex items-center justify-center pt-20">
-                  <div style={{ width: '960px' }}>
-                    <Category/>
+                <main className="flex flex-col items-center justify-center pt-20 ">
+                  <div className="main">
+                    <Carousel/>
                     {children}
-                  </div>
+                  </div> 
                    
                 </main>
             
