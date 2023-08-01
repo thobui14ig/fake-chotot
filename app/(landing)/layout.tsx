@@ -1,4 +1,4 @@
-import HeaderLanding from "@/components/landing/navbar"
+import HeaderLanding from "@/components/landing/navbar/navbar"
 import Category from "./category"
 
 const HomeLayout = ({

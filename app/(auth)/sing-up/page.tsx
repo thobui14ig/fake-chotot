@@ -1,14 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
+import { useRouter } from 'next/navigation';
 import './sing-up.scss';
 
 export default function SingUp() {
+  const router = useRouter()
 
   return (
     <>
       <div className='sign-in'>
         <div className='sign-in__logo'>
-          <img src='./images/logo.png' className='sign-in__img' alt='no imgage' />
+          <img src='./images/logo.png' className='sign-in__img cursor-pointer' alt='no imgage' onClick={() => router.push('/')}/>
 
           <div className='sign-in__main'>
             <h1 className='sign-in__title'>Đăng ký tài khoản</h1>
@@ -17,10 +19,10 @@ export default function SingUp() {
               <input type='text' placeholder='Họ và tên' className='sign-in__form-username' />
               <input type='email' placeholder='email' className='sign-in__form-username' />
               <input type='password' placeholder='mật khẩu' className='sign-in__form-password' />
-              <div className='sign-in__from-check'>
+              {/* <div className='sign-in__from-check'>
                 <input type='checkbox' className='sign-in__check' checked/>
                 <p className='sign-in__from-check-content'>Bằng việc đăng ký bạn đã đồng ý với điều khoản sử dụng</p>
-              </div>
+              </div> */}
               <button className='sign-in__btn-login'>ĐĂNG NHẬP</button>
             </form>
 
@@ -50,7 +52,7 @@ export default function SingUp() {
 
             <div className='sign-in__footer'>
               <span className='sign-in__footer-left'>Đã có tài khoản?</span>
-              <a className='sign-in__footer-right'>Đăng nhập ngay</a>
+              <p className='sign-in__footer-right' onClick={() => router.push('/sing-in')}>Đăng nhập ngay</p>
             </div>
           </div>
         </div>

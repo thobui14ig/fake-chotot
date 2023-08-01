@@ -1,12 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
+'use client'
+import { useRouter } from 'next/navigation';
 import './sign-in.scss';
 
 export default function SingIn() {
+  const router = useRouter()
   return (
     <>
       <div className='sign-in'>
         <div className='sign-in__logo'>
-          <img src='./images/logo.png' className='sign-in__img' alt='no imgage' />
+          <img src='./images/logo.png' className='sign-in__img cursor-pointer' alt='no imgage' onClick={() => router.push('/')}/>
 
           <div className='sign-in__main'>
             <h1 className='sign-in__title'>Đăng nhập</h1>
@@ -44,7 +47,7 @@ export default function SingIn() {
 
             <div className='sign-in__footer'>
               <span className='sign-in__footer-left'>Chưa có tài khoản?</span>
-              <a className='sign-in__footer-right'>Đăng ký tài khoản mới</a>
+              <p className='sign-in__footer-right' onClick={() => router.push('/sing-up')}>Đăng ký tài khoản mới</p>
             </div>
           </div>
         </div>
