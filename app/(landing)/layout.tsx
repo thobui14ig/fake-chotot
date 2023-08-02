@@ -1,5 +1,7 @@
 import HeaderLanding from "@/components/landing/navbar/navbar"
-import Carousel from "./Home/carousel"
+import Carousel from "../../components/landing/carousel"
+import Category from "@/components/landing/category"
+import './layout.scss'
 
 const HomeLayout = ({
     children,
@@ -8,18 +10,16 @@ const HomeLayout = ({
   }) => {
     return(
       <main>
-        <div className="flex">
-            <div className="flex flex-col flex-1">
-                <HeaderLanding/>
-                <main className="flex flex-col items-center justify-center pt-20 ">
-                  <div className="main">
-                    <Carousel/>
-                    {children}
-                  </div> 
-                   
-                </main>
-            
-          </div>
+        <div className="flex flex-col flex-1">
+            <HeaderLanding/>
+            <main className="pt-20 ">
+              <div className="main">
+                <Carousel/>
+                <Category/>
+                {children}
+              </div> 
+                
+            </main>
         </div>
       </main>
 

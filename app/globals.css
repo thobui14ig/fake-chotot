@@ -9,6 +9,7 @@ html, body, :root{
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --background-layout: rgb(255, 255, 255)
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,15 +21,14 @@ html, body, :root{
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
+  background: #f4f4f4
 }
 
+.main {
+    margin: 3px auto;
+    max-width: 960px;
+}
+/* 
 @media only screen and (min-width: 980px) {
   .main {
     width: 959px;
@@ -49,4 +49,4 @@ body {
     width: 400px;
   }
   
-}
+} */
