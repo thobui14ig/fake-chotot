@@ -57,9 +57,9 @@ function SearchBox() {
     <AutoComplete
         popupClassName="certain-category-search-dropdown"
         options={options}
-        className='lg:w-3/4'
+        className='lg:w-3/4 flex-1'
     >
-        <Search type="text" placeholder="Tìm kiếm sản phẩm giá rẻ" className="py-1 px-2 rounded-md text-white "/>
+        <Search type="text" placeholder="Tìm kiếm sản phẩm giá rẻ" className="py-1 px-2 rounded-md text-white max-sm:px-0"/>
     </AutoComplete>
   )
 }

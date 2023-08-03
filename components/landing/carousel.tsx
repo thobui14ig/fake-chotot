@@ -11,7 +11,7 @@ const contentStyle: React.CSSProperties = {
 };
 
 const Carousel: React.FC = () => (
-  <Slider autoplay className='px-3' style={{ background: 'var(--background-layout)' }}>
+  <Slider autoplay className='px-3 max-sm:px-0' style={{ background: 'var(--background-layout)' }}>
     <div>
       <h3 style={contentStyle}>
         <img src='./images/slider1.jpg'  alt='no imgage'/>

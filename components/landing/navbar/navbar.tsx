@@ -36,24 +36,24 @@ function HeaderLanding() {
   };
 
   return (
-    <header className="flex justify-between items-center bg-gray-800 p-4 fixed top-0 left-0 right-0 z-10" style={{ background: '#ffba00', fontSize: '0.875rem' }}>
-      <div className="flex items-center cursor-pointer" onClick={() => router.push('/')}>
+    <header className="flex justify-between items-center bg-gray-800 p-4 fixed top-0 left-0 right-0 z-10 max-sm:px-2" style={{ background: '#ffba00', fontSize: '0.875rem' }}>
+      <div className="flex items-center cursor-pointer max-sm:hidden" onClick={() => router.push('/')}>
         {/* <img src="path_to_logo.png" alt="Logo" className="h-8 w-8"/> */}
         <span className="text-white font-semibold ml-2">Your Logo</span>
       </div>
 
-      <div className="flex flex-1 justify-end mx-2">
+      <div className="flex flex-1 justify-end mx-2 max-sm:mx-0 max-sm:justify-start">
         <SearchBox/>
       </div>
 
       <div>
-          <NotificationOutlined className='cursor-pointer text-xl'/>
-          <MessageOutlined className='cursor-pointer ml-6 text-xl'/>
-          <span className='ml-6'>Quản lý tin</span>
-          <Avatar className='ml-6'
+          <NotificationOutlined className='cursor-pointer text-xl max-sm:hidden'/>
+          <MessageOutlined className='cursor-pointer ml-6 text-xl '/>
+          <span className='ml-6 max-sm:hidden max-lg:hidden'>Quản lý tin</span>
+          <Avatar className='ml-6 max-sm:hidden'
             style={{ border: '1px solid #e5e7eb', marginRight: 10 }}
           />
-          <Dropdown menu={{ items, onClick }} className='cursor-pointer'>
+          <Dropdown menu={{ items, onClick }} className='cursor-pointer max-sm:hidden' >
             <a onClick={(e) => e.preventDefault()}>
               <Space>
                 Tài khoản
@@ -61,7 +61,7 @@ function HeaderLanding() {
               </Space>
             </a>
           </Dropdown>
-          <Button type="primary" className='w-44 h-10 ml-6'>Đăng tin</Button>
+          <Button type="primary" className='w-44 h-10 ml-6 max-sm:hidden max-lg:hidden'>Đăng tin</Button>
 
       </div>
   </header>
